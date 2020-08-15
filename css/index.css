@@ -1,0 +1,125 @@
+@media all and (min-width: 1024px )
+{
+    #add-to-cart{
+        bottom: 47%;
+        left: -125px;
+    }
+}
+@media screen and (max-width: 1024px)
+{
+    #add-to-cart{
+        top: -75px;
+        right: 47%;
+    }
+}
+body::-webkit-scrollbar 
+{
+    width: 0.5rem;
+} 
+body::-webkit-scrollbar-track 
+{
+    background: #1e1e24;
+}  
+body::-webkit-scrollbar-thumb
+{
+    background: rgb(10, 105, 81);
+}
+body{
+    background-color: pink;
+}
+
+#home{
+    margin-top: 70px;
+}
+#shop{
+    margin-top: 100px;
+}
+.surface{  
+    background-color: #E5E9F1;  
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 37em;
+    width: auto;
+    margin-top: 1em;
+    box-shadow: 2px 3px 20px 0px rgb(54, 54, 54);
+}
+.myitem{
+    padding-right: 25px;
+    text-shadow:2px 3px 20px 0px rgb(54, 54, 54);
+}
+.logo{
+    margin-left: 1em;
+    font-size: 30px;
+    color: #de3b6a;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.logo:hover{
+    color: white !important;
+    text-decoration: none;
+    text-shadow: 2px 2px 20px black;
+}
+.starter{
+    padding-top: 9em;
+}
+.descreption , .header-title, .buttons{
+    text-align: center;
+}
+.header{
+    padding-top: 5em;
+}
+.col-xm-12{
+    padding-top: 1em; 
+}
+.descreption{
+    font-size: 0.9em;
+}
+.header-title{
+    color: #de3b6a;
+}
+
+#shop-container{
+    overflow: auto;
+    height: 500px;
+    background-color:  rgba(201, 201, 201, 0.1);
+}
+.card{
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.507);
+}
+#shop-container::-webkit-scrollbar 
+{
+    width: 0.7rem;
+    
+} 
+#shop-container::-webkit-scrollbar-track 
+{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}  
+#shop-container::-webkit-scrollbar-thumb
+{
+    box-shadow:  0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background: #de3b6a;
+
+}
+#add-to-cart{
+    border: 4px solid white ;
+    border-radius: 25%;
+    display: inline-block;
+    position: absolute;
+
+    padding: 10px ;
+    transition: all 0.35s ease;
+}
+#add-to-cart:hover{
+    cursor: pointer;
+    background: rgb(58, 58, 58);
+}
+#add-to-cart > img{
+    height: 30px;
+    width: 30px;
+}
