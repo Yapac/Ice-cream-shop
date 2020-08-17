@@ -30,13 +30,14 @@ body{
 
 #home{
     margin-top: 80px;
+    background-image: url("../img/back.jpg");
 }
 #shop{
     margin-top: 100px;
 }
 .surface{  
     background-color: #E5E9F1;  
-    background-image: url("../img/back.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
     height: 37em;
@@ -122,4 +123,55 @@ body{
 .icons > img{
     height: 30px;
     width: 30px;
+}
+#items-container{
+    border: dashed 4px rgba(126, 126, 126, 0.7);
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+    height: 250px;
+    margin: 5px;
+    padding: 20px;
+    overflow-x: none;
+    overflow-y: auto;
+    justify-content: space-around;
+}
+td,th{
+    padding:40px;
+}
+th{
+    padding-top:0px ;
+    padding-bottom: 5px;
+}
+thead{
+    border-bottom: lightgray 4px solid;
+}
+.items-title{
+    width: 45%;
+    border-bottom: lightgray 1px solid;
+    align-items: center;
+
+}
+.items-price{
+    width: 15%; 
+    border-bottom: lightgray 1px solid;
+    align-items: center;
+}
+.items-quantity{
+    width: 30%;
+    border-bottom: lightgray 1px solid;
+    align-items: center;
+}
+.items-total{
+    width: 10%;
+    border-bottom: lightgray 1px solid;
+    align-items: center;
+}
+#cancel{
+    text-align: center;
+    border: solid 2px darkslateblue;
+    border-radius: 50%;
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
