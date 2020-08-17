@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>ice cream shop</title>
 </head>
 
@@ -35,7 +36,7 @@
                         <a class="nav-link" href="#">Location</a>
                     </li>
                     <li class="nav-item myitem">
-                        <a class="nav-link" href="#">My cart <span class="badge badge-success">0</span></a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#cart">My cart <span class="badge badge-success">0</span></a>
                     </li>
                     <li class="nav-item myitem">
                         <a class="nav-link disabled" href="#">Contact Us</a>
@@ -49,7 +50,7 @@
                 <h3 class="header-title">HAND-MADE ICE CREAM !</h3>
                 <p class="descreption">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Dolorum architecto commodi ipsum quas deleniti ea corrupti a dignissimos?<br> Soluta, repudiandae.</p>
                 <div class="buttons">
-                    <a class="btn btn-danger shadow  rounded " href="#shop">Shop <span class="badge badge-light">+</span></a>
+                    <a class="btn btn-danger shop shadow  rounded " href="#shop">Shop <span class="badge badge-light">+</span></a>
                     <a class="btn btn-primary text-white">Contact Us</a>
                 </div>
             </div>
@@ -58,7 +59,7 @@
     </div>
 
     <div id="shop" style="position: relative;" class="container surface p-3 mb-5 rounded">
-        <div class="icons">
+        <div class="icons" data-toggle="modal" data-target="#cart">
             <img src="img/cart.png" alt="add-to-cart">
         </div>
 
@@ -126,6 +127,67 @@
 
     </div>
 
+    <!--Modals-->
+
+    
+    <!-- The Modal -->
+    <div class="modal fade" id="cart">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h3 class="modal-title">My Cart</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h5>Your cart:</h5>
+                <div id="items-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="items-title">ITEM</th>
+                                <th class="items-price">PRICE</th>
+                                <th class="items-quantity">QUANTITY</th>
+                                <th class="items-total">TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody class="items">
+                            <tr>
+                                <td class="items-title"></td>
+                                <td class="items-price"></td>
+                                <td class="items-quantity"></td>
+                                <td class="items-total"></td>
+                            </tr>
+                            <tr>
+                                <td class="items-title"></td>
+                                <td class="items-price"></td>
+                                <td class="items-quantity"></td>
+                                <td class="items-total"></td>
+                            </tr>
+                        </tbody> 
+                        <tfoot>
+                            <tr>
+                                <th colspan="2"></th>
+                                <th class="items-quantity">Total</th>
+                                <th class="items-total">0dh</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">To order</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -137,5 +199,4 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
 </body>
-
 </html>
