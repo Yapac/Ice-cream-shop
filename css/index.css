@@ -4,12 +4,19 @@
         bottom: 47%;
         right: -125px;
     }
+    #forgot{
+        position: relative;
+        right: -65px;
+    }
 }
 @media screen and (max-width: 1024px)
 {
     .icons{
         top: -75px;
         right: 45%;
+    }
+    .pc{
+        display: none;
     }
 }
 body::-webkit-scrollbar 
@@ -32,11 +39,11 @@ body{
     margin-top: 80px;
     background-image: url("../img/back.jpg");
 }
-#shop{
+#shop, #login{
     margin-top: 100px;
 }
 .surface{  
-    background-color: #E5E9F1;  
+    background-color: #ebeef5;  
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,6 +61,7 @@ body{
     font-size: 30px;
     color: #de3b6a;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    transition: all 0.2s ease;
 }
 .logo:hover{
     color: white !important;
@@ -112,7 +120,6 @@ body{
     border-radius: 25%;
     display: inline-block;
     position: absolute;
-
     padding: 10px ;
     transition: all 0.35s ease;
 }
@@ -120,6 +127,7 @@ body{
     cursor: pointer;
     background: rgb(58, 58, 58);
 }
+
 .icons > img{
     height: 30px;
     width: 30px;
@@ -128,7 +136,7 @@ body{
     border: dashed 4px rgba(126, 126, 126, 0.7);
     background-color: rgb(241, 241, 241);
     border-radius: 15px;
-    height: 250px;
+    height: 285px;
     margin: 5px;
     padding: 20px;
     overflow-x: none;
@@ -165,4 +173,49 @@ thead{
     width: 10%;
     border-bottom: lightgray 1px solid;
     align-items: center;
+}
+
+#wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+}
+#access{
+    height: 85%;
+    width: 85%;  
+    position: relative;
+    top: 35px;
+    left:60px
+}
+.input{
+    background-color: #ebeef5;
+    border:none;
+    border-bottom: 3px solid #3F3D56;
+    width: 50%;
+    margin: auto;
+}
+#btn-login{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #DE3B6A;
+    color: white;
+    width: 50%;
+    border-radius: 40px;
+    transition: all 0.35s ease;
+}
+#btn-login:hover{
+    background-color: rgb(223, 51, 99);
+    transform: scale(1.1);
+}
+#forgot{
+    color: gray;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+}
+#forgot:hover{
+    text-decoration: none;
+    color: #de3b6a;
 }
