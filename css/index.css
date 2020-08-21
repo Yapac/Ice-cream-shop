@@ -8,6 +8,9 @@
         position: relative;
         right: -65px;
     }
+    .input ,#btn-login{
+        width: 50%;
+    }
 }
 @media screen and (max-width: 1024px)
 {
@@ -17,6 +20,9 @@
     }
     .pc{
         display: none;
+    }
+    .input ,#btn-login{
+        width: 70%;
     }
 }
 body::-webkit-scrollbar 
@@ -193,7 +199,6 @@ thead{
     background-color: #ebeef5;
     border:none;
     border-bottom: 3px solid #3F3D56;
-    width: 50%;
     margin: auto;
 }
 #btn-login{
@@ -201,7 +206,6 @@ thead{
     padding: 10px;
     background-color: #DE3B6A;
     color: white;
-    width: 50%;
     border-radius: 40px;
     transition: all 0.35s ease;
 }
