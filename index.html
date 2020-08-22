@@ -251,7 +251,7 @@
                         </div>
                         <div class="col">
                             <label for="lastname">Last name:</label>
-                            <input type="password" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname" required>
+                            <input type="text" class="form-control" id="lastname" placeholder="Enter lastname" name="lastname" required>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -274,7 +274,8 @@
                     <div class="row">
                         <div class="col">
                             <label for="country">Country:</label>
-                            <input type="text" class="form-control" id="country" placeholder="Enter country" name="country" required>
+                            <select id="country" name="country" class="custom-select" required>
+                            </select>
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -354,6 +355,28 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        var request_countries= new XMLHttpRequest();
+        request_countries.onreadystatechange= function(){
+            if (this.readyState==XMLHttpRequest.DONE && this.status == 200) {
+                let respond = JSON.parse(this.responseText);
+                let input_conutries=document.getElementById("country");
+                for (let index = 0; index < respond.length; index++) {
+                    if(respond[index].name=="Morocco")
+                    {
+                        $('#country').append('<option value="'+respond[index].name+'" selected>'+respond[index].name+'</option>');
+                    }
+                    else $('#country').append('<option value="'+respond[index].name+'">'+respond[index].name+'</option>');
+                    
+                }
+            }
+            else if(this.readyState==XMLHttpRequest.DONE){
+                console.log("oups");
+            }
+        }
+        request_countries.open("GET","https://restcountries.eu/rest/v2/all?fields=name");
+        request_countries.send();
     </script>
 </body>
 </html>
