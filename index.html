@@ -361,7 +361,6 @@
         request_countries.onreadystatechange= function(){
             if (this.readyState==XMLHttpRequest.DONE && this.status == 200) {
                 let respond = JSON.parse(this.responseText);
-                let input_conutries=document.getElementById("country");
                 for (let index = 0; index < respond.length; index++) {
                     if(respond[index].name=="Morocco")
                     {
