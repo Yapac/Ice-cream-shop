@@ -18,6 +18,8 @@
     <div id="home" style="position: relative;" class="container surface p-3 mb-5 rounded">
         <div class="icons" data-toggle="modal" data-target="#info">
             <img src="img/info.png" alt="add-to-cart">
+            <h3 class="icons-title">Info</h3>   
+
         </div>
         <nav class="row navbar navbar-expand-md navbar-light">
             <div class=" col-lg-6 d-flex justify-content-between">
@@ -63,6 +65,7 @@
 
         <div class="icons" data-toggle="modal" data-target="#sign-up">
             <img src="img/login.png" alt="add-to-cart">
+            <h3 class="icons-title" style="left: 0px;">Sign up</h3>   
         </div>
 
         <div class="container-fluid">
@@ -100,7 +103,9 @@
 
     <div id="shop" style="position: relative;" class="container surface p-3 mb-5 rounded">
         <div class="icons" data-toggle="modal" data-target="#cart">
-            <img src="img/cart.png" alt="add-to-cart">
+            <img src="img/cart.png" alt="cart">
+            <h3 class="icons-title">Cart</h3>   
+
         </div>
 
         <div class=" col-lg-6 d-flex p-2 justify-content-between">
@@ -356,26 +361,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
-    <script>
-        var request_countries= new XMLHttpRequest();
-        request_countries.onreadystatechange= function(){
-            if (this.readyState==XMLHttpRequest.DONE && this.status == 200) {
-                let respond = JSON.parse(this.responseText);
-                for (let index = 0; index < respond.length; index++) {
-                    if(respond[index].name=="Morocco")
-                    {
-                        $('#country').append('<option value="'+respond[index].name+'" selected>'+respond[index].name+'</option>');
-                    }
-                    else $('#country').append('<option value="'+respond[index].name+'">'+respond[index].name+'</option>');
-                    
-                }
-            }
-            else if(this.readyState==XMLHttpRequest.DONE){
-                console.log("oups");
-            }
-        }
-        request_countries.open("GET","https://restcountries.eu/rest/v2/all?fields=name");
-        request_countries.send();
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
