@@ -18,7 +18,8 @@
         top: -75px;
         right: 45%;
     }
-    .pc{
+    
+    .pc, .icons-title{
         display: none;
     }
     .input ,#btn-login{
@@ -50,7 +51,6 @@ body{
 }
 .surface{  
     background-color: #ebeef5;  
-
     background-size: cover;
     background-repeat: no-repeat;
     height: 37em;
@@ -137,6 +137,19 @@ body{
 .icons > img{
     height: 30px;
     width: 30px;
+}
+.icons-title{
+    position: absolute;
+    bottom: -25px;
+    margin: auto;
+    font-size: 15px;
+    width: 60px;
+    color: white;
+    text-shadow: gray 3px 3px 10px;
+    transition: all 0.3s ease;
+}
+.icons-title:hover{
+    text-shadow: gray 3px 3px 3px;
 }
 #items-container{
     border: dashed 4px rgba(126, 126, 126, 0.7);
